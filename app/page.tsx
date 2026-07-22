@@ -19,25 +19,27 @@ export default function Home() {
       {/* HERO */}
       <section className="overflow-hidden bg-gradient-to-b from-paper to-sand">
         <div
-          className={`${container} flex flex-wrap items-center gap-8 py-11 md:gap-16 md:py-20`}
+          className={`${container} flex flex-wrap items-center gap-7 py-8 md:gap-16 md:py-20`}
         >
-          <div className="min-w-[300px] flex-1 basis-[440px]">
+          <div className="min-w-[280px] flex-1 basis-[440px]">
             <Reveal>
-              <div className="mb-5 inline-flex items-center gap-2.5 rounded-full border border-greenLine bg-greenTint px-3.5 py-1.5 text-[13.5px] font-bold tracking-[0.02em] text-greenDark">
+              <div className="mb-4 inline-flex items-center gap-2.5 rounded-full border border-greenLine bg-greenTint px-3.5 py-1.5 text-[13px] font-bold tracking-[0.02em] text-greenDark">
                 <span className="h-2 w-2 animate-pulseDot rounded-full bg-green" />
                 Praxis in Hannover List
               </div>
-              <h1 className="text-[clamp(2.7rem,5.6vw,4.6rem)] font-extrabold text-ink">
+              <h1 className="text-[clamp(2.15rem,8vw,4.6rem)] font-extrabold text-ink">
                 Beweglich bleiben,
                 <br />
                 <span className="text-green">schmerzfrei leben.</span>
               </h1>
-              <p className="mt-6 max-w-[40ch] text-[clamp(1.05rem,1.5vw,1.3rem)] text-muted">
+              <p className="mt-4 max-w-[42ch] text-[clamp(1rem,1.4vw,1.3rem)] text-muted">
                 Physiotherapie, Krankengymnastik und Reha in Hannover. Mit
                 Spezialgeräten wie Hochleistungslaser, Stoßwelle und HydroJet, die Sie
                 in dieser Kombination sonst kaum in Hannover finden.
               </p>
-              <div className="mt-8 flex flex-wrap items-center gap-3.5">
+              {/* Auf Mobile uebernimmt die feste Anrufen/Termin-Leiste unten,
+                  daher die Hero-CTAs erst ab Desktop (lg) zeigen. */}
+              <div className="mt-6 hidden flex-wrap items-center gap-3 lg:flex">
                 <Link href="/#kontakt" className={btnPrimary}>
                   Termin vereinbaren <ArrowRight className="h-4 w-4" />
                 </Link>
@@ -45,7 +47,7 @@ export default function Home() {
                   <Phone className="h-5 w-5 text-green" /> {site.phoneDisplay}
                 </a>
               </div>
-              <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-[14.5px] font-semibold text-muted">
+              <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-[14px] font-semibold text-muted">
                 <span>Kasse und Selbstzahler</span>
                 <span className="text-line">|</span>
                 <span>Mo bis Do 8 bis 20 Uhr</span>
@@ -189,7 +191,21 @@ export default function Home() {
                     {st.n}
                   </div>
                   <h3 className="mt-[18px] text-[1.25rem]">{st.t}</h3>
-                  <p className="mt-2.5 text-[15px] leading-[1.55] text-muted">{st.d}</p>
+                  <p className="mt-2.5 text-[15px] leading-[1.55] text-muted">
+                    {st.d}
+                    {st.n === "1" && (
+                      <>
+                        {" "}
+                        <Link
+                          href="/#kontakt"
+                          className="font-semibold text-greenDark underline underline-offset-2 hover:text-ink"
+                        >
+                          über das Formular
+                        </Link>
+                        .
+                      </>
+                    )}
+                  </p>
                 </div>
               </Reveal>
             ))}

@@ -106,36 +106,42 @@ export default function Header() {
           onClick={() => setMenuOpen((o) => !o)}
           aria-label={menuOpen ? "Menü schließen" : "Menü öffnen"}
           aria-expanded={menuOpen}
-          className="ml-auto grid h-11 w-11 place-items-center gap-[5px] rounded-xl border border-line bg-white lg:hidden"
+          className="relative ml-auto h-11 w-11 rounded-xl border border-line bg-white lg:hidden"
         >
           <span
-            className={`block h-[2.5px] w-5 rounded bg-ink transition-transform ${
-              menuOpen ? "translate-y-[7.5px] rotate-45" : ""
-            }`}
+            className="absolute left-1/2 top-1/2 block h-[2.5px] w-[22px] rounded bg-ink transition-all duration-300"
+            style={{
+              transform: menuOpen
+                ? "translate(-50%,-50%) rotate(45deg)"
+                : "translate(-50%,-8px)",
+            }}
           />
           <span
-            className={`block h-[2.5px] w-5 rounded bg-ink transition-opacity ${
-              menuOpen ? "opacity-0" : ""
-            }`}
+            className="absolute left-1/2 top-1/2 block h-[2.5px] w-[22px] -translate-x-1/2 -translate-y-1/2 rounded bg-ink transition-all duration-200"
+            style={{ opacity: menuOpen ? 0 : 1 }}
           />
           <span
-            className={`block h-[2.5px] w-5 rounded bg-ink transition-transform ${
-              menuOpen ? "-translate-y-[7.5px] -rotate-45" : ""
-            }`}
+            className="absolute left-1/2 top-1/2 block h-[2.5px] w-[22px] rounded bg-ink transition-all duration-300"
+            style={{
+              transform: menuOpen
+                ? "translate(-50%,-50%) rotate(-45deg)"
+                : "translate(-50%,6px)",
+            }}
           />
         </button>
       </div>
 
       {/* Mobile-Menue */}
       {menuOpen && (
-        <div className="border-t border-line bg-white px-6 pb-6 pt-3 lg:hidden">
+        <div className="menu-panel border-t border-line bg-white px-6 pb-6 pt-2 lg:hidden">
           <nav className="flex flex-col">
-            {nav.map((item) => (
+            {nav.map((item, i) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={(e) => handleNav(item.href, e)}
-                className="border-b border-line py-3.5 text-[18px] font-semibold text-ink"
+                className="menu-item border-b border-line py-3.5 text-[18px] font-semibold text-ink"
+                style={{ animationDelay: `${i * 45}ms` }}
               >
                 {item.label}
               </Link>
@@ -143,7 +149,8 @@ export default function Header() {
           </nav>
           <a
             href={site.phoneHref}
-            className="mt-4 flex items-center justify-center gap-2 rounded-btn bg-green px-4 py-4 text-[16px] font-bold text-white"
+            className="menu-item mt-4 flex items-center justify-center gap-2 rounded-btn bg-green px-4 py-4 text-[16px] font-bold text-white"
+            style={{ animationDelay: `${nav.length * 45}ms` }}
           >
             Termin vereinbaren · {site.phoneDisplay}
           </a>

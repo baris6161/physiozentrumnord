@@ -67,3 +67,21 @@ export function Spark(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+export function Facebook(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.7c0-.9.3-1.6 1.6-1.6h1.7V3.2C16.2 3.1 15.2 3 14.3 3c-2.3 0-3.8 1.4-3.8 4v2.8H7.6V13h2.9v8h3z" />
+    </svg>
+  );
+}
+
+export function Instagram(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...base} {...props}>
+      <rect x="3.5" y="3.5" width="17" height="17" rx="4.5" />
+      <circle cx="12" cy="12" r="3.7" />
+      <circle cx="16.8" cy="7.2" r="1.05" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}

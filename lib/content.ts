@@ -92,7 +92,7 @@ export const services: Service[] = [
       "Lindert Kopfschmerzen",
       "Stabilisiert überbewegliche Gelenke",
     ],
-    device: null,
+    device: "Manuthera 242 von Lojer, die weltweit erste Behandlungsliege mit zwei synchronisierten Motoren.",
     related: ["physiotherapie", "krankengymnastik", "massage"],
     metaTitle: "Manualtherapie in Hannover | Physiotherapie Zentrum Nord",
     metaDescription:
@@ -167,7 +167,7 @@ export const services: Service[] = [
       "Zwei Wellenlängen für tiefe Wirkung",
       "Ohne Medikamente und Nebenwirkungen",
     ],
-    device: "K-Laser Cube, Hochleistungslaser der Klasse 4 mit zwei Wellenlängen.",
+    device: "Chattanooga LightForce XLi und K-Laser Cube, zwei Hochleistungslaser der Klasse 4.",
     related: ["stosswellentherapie-hannover", "physiotherapie", "schroepftherapie"],
     metaTitle: "Lasertherapie in Hannover | Physiotherapie Zentrum Nord",
     metaDescription:
@@ -217,11 +217,36 @@ export const services: Service[] = [
       "Beugt Rückenbeschwerden vor",
       "Für jedes Alter geeignet",
     ],
-    device: "Powerplate, seitenwechselndes Vibrationstraining.",
+    device: "Galileo mit Personal-Trainer-Display und Powerplate, seitenwechselndes Vibrationstraining.",
     related: ["krankengymnastik", "physiotherapie", "stosswellentherapie-hannover"],
     metaTitle: "Vibrationsplatten Training in Hannover | Physiotherapie Zentrum Nord",
     metaDescription:
       "Vibrationsplatten Training in Hannover. Bis zu 97 Prozent Muskelaktivierung, gelenkschonend und effektiv, für jedes Alter.",
+  },
+  {
+    slug: "faszienbehandlung",
+    name: "Faszienbehandlung",
+    cat: "Selbstzahler",
+    img: IMG + "fasciq-faszientools.png",
+    focus: "center",
+    fit: "contain",
+    card: "Gezielte Behandlung verklebter Faszien mit professionellen Werkzeugen aus Edelstahl.",
+    lead: "Verklebte Faszien lösen wir gezielt mit professionellen Werkzeugen aus Edelstahl, für mehr Beweglichkeit und weniger Schmerz.",
+    body: [
+      "Faszien sind das bindegewebige Netz, das Muskeln, Gelenke und Organe umhüllt. Verkleben oder verhärten sie, entstehen Bewegungseinschränkungen und Schmerzen. Mit der instrumentengestützten Faszienbehandlung lösen wir diese Verklebungen gezielt.",
+      "Unsere FASCIQ Werkzeuge aus chirurgischem Edelstahl übertragen feine Rückmeldungen aus dem Gewebe direkt in unsere Hand. So spüren wir verhärtete Stellen genau und behandeln sie kontrolliert, von sanftem Gleiten bis zur gezielten Mobilisation.",
+    ],
+    benefits: [
+      "Löst verklebte und verhärtete Faszien",
+      "Bei Verspannungen und Bewegungseinschränkungen",
+      "Regt Durchblutung und Regeneration an",
+      "Profi-Werkzeuge aus chirurgischem Edelstahl",
+    ],
+    device: "FASCIQ Faszientools aus chirurgischem Edelstahl.",
+    related: ["massage", "manualtherapie", "physiotherapie"],
+    metaTitle: "Faszienbehandlung in Hannover | Physiotherapie Zentrum Nord",
+    metaDescription:
+      "Instrumentengestützte Faszienbehandlung in Hannover mit professionellen Edelstahl-Werkzeugen. Löst verklebte Faszien bei Verspannungen und Bewegungseinschränkungen.",
   },
 ];
 
@@ -240,7 +265,40 @@ export interface Device {
   slug: string;
 }
 
+// Neuere/Flaggschiff-Geraete zuerst, bewaehrte danach (bleiben erhalten).
 export const devices: Device[] = [
+  {
+    name: "Manuthera 242",
+    tag: "Behandlungsliege von Lojer",
+    img: IMG + "manuthera-242.jpg",
+    focus: "center",
+    desc: "Die weltweit erste Liege mit zwei synchronisierten Motoren. Für dreidimensionale Mobilisation, Traktion und sanfte Dekompression.",
+    slug: "manualtherapie",
+  },
+  {
+    name: "Chattanooga LightForce XLi",
+    tag: "Hochleistungslaser Klasse 4",
+    img: IMG + "chattanooga-lightforce-xli.jpg",
+    focus: "center",
+    desc: "40-Watt-Laser mit Touchscreen. Tief wirksam gegen Schmerzen an Muskeln, Sehnen und Gelenken.",
+    slug: "lasertherapie-hannover",
+  },
+  {
+    name: "Galileo",
+    tag: "Vibrationstraining mit Display",
+    img: IMG + "galileo-vibrationstraining.jpg",
+    focus: "center",
+    desc: "Seitenwechselndes Vibrationstraining mit Personal-Trainer-Display, das Sie durch jede Übung führt.",
+    slug: "vibrationsplatten-training",
+  },
+  {
+    name: "FASCIQ Faszientools",
+    tag: "Instrumentelle Faszienbehandlung",
+    img: IMG + "fasciq-faszientools.png",
+    focus: "center",
+    desc: "Profi-Werkzeuge aus chirurgischem Edelstahl lösen verklebte Faszien gezielt und spürbar.",
+    slug: "faszienbehandlung",
+  },
   {
     name: "Swiss DolorClast",
     tag: "Radiale Stoßwellentherapie",
@@ -258,20 +316,20 @@ export const devices: Device[] = [
     slug: "lasertherapie-hannover",
   },
   {
-    name: "HydroJet",
-    tag: "Wasser-Massagebett",
-    img: IMG + "krankengymnsatik-in-hannover_praxis_10-558w.jpg",
-    focus: "left-top",
-    desc: "Wärme und Wasserdruck-Massage für tiefe Entspannung, ganz ohne sich auskleiden zu müssen.",
-    slug: "massage",
-  },
-  {
     name: "Powerplate",
     tag: "Vibrationsplatten Training",
     img: IMG + "krankengymnsatik-in-hannover_praxis_12__1_-558w.jpg",
     focus: "left-top",
     desc: "Bis zu 97 Prozent Muskelaktivierung in kurzen, gelenkschonenden Trainingseinheiten.",
     slug: "vibrationsplatten-training",
+  },
+  {
+    name: "HydroJet",
+    tag: "Wasser-Massagebett",
+    img: IMG + "krankengymnsatik-in-hannover_praxis_10-558w.jpg",
+    focus: "left-top",
+    desc: "Wärme und Wasserdruck-Massage für tiefe Entspannung, ganz ohne sich auskleiden zu müssen.",
+    slug: "massage",
   },
 ];
 
@@ -297,7 +355,7 @@ export const heroImage = {
 };
 
 export const steps = [
-  { n: "1", t: "Kontakt aufnehmen", d: "Rufen Sie uns an oder senden Sie eine Terminanfrage über das Formular." },
+  { n: "1", t: "Kontakt aufnehmen", d: "Rufen Sie uns an oder senden Sie eine Terminanfrage" },
   { n: "2", t: "Termin und Rezept", d: "Wir vereinbaren passende Zeiten. Bringen Sie bei Bedarf Ihr Rezept und ein Handtuch mit." },
   { n: "3", t: "Behandlung starten", d: "Nach Erstgespräch und Untersuchung beginnen wir mit Ihrem persönlichen Plan." },
 ];

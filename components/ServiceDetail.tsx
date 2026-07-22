@@ -46,7 +46,9 @@ export default function ServiceDetail({ service }: { service: Service }) {
               <p className="mt-5 max-w-[42ch] text-[clamp(1.1rem,1.6vw,1.3rem)] text-ink2">
                 {service.lead}
               </p>
-              <div className="mt-7 flex flex-wrap gap-3">
+              {/* Auf Mobile uebernimmt die feste Anrufen/Termin-Leiste unten,
+                  daher Hero-CTAs erst ab Desktop (lg) zeigen. */}
+              <div className="mt-7 hidden flex-wrap gap-3 lg:flex">
                 <Link href="/#kontakt" className={btnPrimary}>
                   Termin vereinbaren <ArrowRight className="h-4 w-4" />
                 </Link>
