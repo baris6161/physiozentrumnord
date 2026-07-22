@@ -45,5 +45,5 @@ export const nav = [
   { label: "Spezialgeräte", href: "/#spezialgeraete" },
   { label: "Patienteninfo", href: "/patienteninformation" },
   { label: "Jobs", href: "/jobs" },
-  { label: "Kontakt", href: "/kontakt" },
+  { label: "Kontakt", href: "/#kontakt" },
 ];

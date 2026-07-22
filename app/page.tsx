@@ -8,6 +8,7 @@ import HashScroll from "@/components/HashScroll";
 import ServiceCard from "@/components/ServiceCard";
 import DeviceCard from "@/components/DeviceCard";
 import Gallery from "@/components/Gallery";
+import ContactSection from "@/components/ContactSection";
 import { ArrowRight, Phone, Spark } from "@/components/Icons";
 
 export default function Home() {
@@ -37,7 +38,7 @@ export default function Home() {
                 in dieser Kombination sonst kaum in Hannover finden.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3.5">
-                <Link href="/kontakt" className={btnPrimary}>
+                <Link href="/#kontakt" className={btnPrimary}>
                   Termin vereinbaren <ArrowRight className="h-4 w-4" />
                 </Link>
                 <a href={site.phoneHref} className={btnSecondary}>
@@ -211,7 +212,7 @@ export default function Home() {
                   <Phone className="h-5 w-5" /> {site.phoneDisplay}
                 </a>
                 <Link
-                  href="/kontakt"
+                  href="/#kontakt"
                   className="inline-flex items-center gap-2 rounded-btn border border-white/30 px-6 py-3.5 text-[16px] font-bold text-white transition-colors hover:border-white"
                 >
                   Kontaktformular
@@ -221,6 +222,9 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
+
+      {/* KONTAKT (Section unten auf der Startseite, wie im Design) */}
+      <ContactSection id="kontakt" />
     </>
   );
 }

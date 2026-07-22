@@ -76,7 +76,7 @@ export default function Header() {
           aria-label={site.name}
           className="flex flex-shrink-0 items-center"
         >
-          <Brand />
+          <Brand className="h-9 sm:h-10" />
         </Link>
 
         {/* Desktop-Navigation */}
@@ -92,7 +92,8 @@ export default function Header() {
             </Link>
           ))}
           <Link
-            href="/kontakt"
+            href="/#kontakt"
+            onClick={(e) => handleNav("/#kontakt", e)}
             className="ml-2 inline-flex items-center gap-2 rounded-btn bg-green px-4 py-2.5 text-[14.5px] font-bold text-white shadow-sm2 transition-colors hover:bg-greenDark animate-ctaGlow"
           >
             Termin vereinbaren <ArrowRight className="h-4 w-4" />

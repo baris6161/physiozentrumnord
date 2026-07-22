@@ -13,7 +13,7 @@ export default function Footer() {
         {/* Marke + Kontakt */}
         <div className="min-w-[230px] flex-1 basis-[260px]">
           <Link href="/" className="mb-4 inline-flex">
-            <Brand variant="dark" />
+            <Brand variant="dark" className="h-9" />
           </Link>
           <p className="text-[15px] leading-7">
             <a

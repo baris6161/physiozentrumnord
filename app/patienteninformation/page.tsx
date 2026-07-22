@@ -44,7 +44,7 @@ export default function Page() {
 
         <Reveal delay={80}>
           <div className="mt-9">
-            <Link href="/kontakt" className={btnPrimary}>
+            <Link href="/#kontakt" className={btnPrimary}>
               Termin vereinbaren <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

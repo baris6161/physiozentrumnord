@@ -47,7 +47,7 @@ export default function ServiceDetail({ service }: { service: Service }) {
                 {service.lead}
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
-                <Link href="/kontakt" className={btnPrimary}>
+                <Link href="/#kontakt" className={btnPrimary}>
                   Termin vereinbaren <ArrowRight className="h-4 w-4" />
                 </Link>
                 <a href={site.phoneHref} className={btnSecondary}>
