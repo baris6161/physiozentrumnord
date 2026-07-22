@@ -33,13 +33,10 @@ const nextConfig = {
       },
     ];
   },
-  async redirects() {
-    return [
-      // Alte, groß geschriebene Duda-URLs -> neue Kleinschreibung (301, Ranking-Erhalt)
-      { source: "/Krankengymnastik", destination: "/krankengymnastik", statusCode: 301 },
-      { source: "/Jobs", destination: "/jobs", statusCode: 301 },
-    ];
-  },
+  // Hinweis: Die 301-Redirects der alten grossgeschriebenen URLs
+  // (/Jobs, /Krankengymnastik) laufen ueber middleware.ts mit exaktem,
+  // case-sensitivem Abgleich. next.config-redirects matchen case-insensitiv
+  // und wuerden sonst die Kleinschreibung auf sich selbst umleiten (Schleife).
 };
 
 export default nextConfig;
