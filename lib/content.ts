@@ -77,9 +77,9 @@ export const services: Service[] = [
     slug: "manualtherapie",
     name: "Manualtherapie",
     cat: "Kassenleistung",
-    img: IMG + "krankengymnsatik-in-hannover_praxis_04-1920w.jpg",
-    focus: "left-top",
-    fit: "cover",
+    img: IMG + "manuthera-242.jpg",
+    focus: "center",
+    fit: "contain",
     card: "Gezielte Untersuchung mit den Händen und sanfte Mobilisation von Gelenken, Muskeln und Nerven.",
     lead: "Mit den Händen finden wir die Ursache und mobilisieren Gelenke, Muskeln und Nerven sanft und gezielt.",
     body: [
@@ -248,6 +248,31 @@ export const services: Service[] = [
     metaDescription:
       "Instrumentengestützte Faszienbehandlung in Hannover mit professionellen Edelstahl-Werkzeugen. Löst verklebte Faszien bei Verspannungen und Bewegungseinschränkungen.",
   },
+  {
+    slug: "waermetherapie",
+    name: "Wärmetherapie",
+    cat: "Selbstzahler",
+    img: IMG + "tdp-lampe-cq32.png",
+    focus: "center",
+    fit: "contain",
+    card: "Wohltuende Tiefenwärme mit der TDP-Mineralwärmelampe, lockert Muskeln und fördert die Durchblutung.",
+    lead: "Wohltuende Tiefenwärme, die Muskeln lockert und die Durchblutung anregt, gern auch als Vorbereitung oder Ergänzung zu anderen Behandlungen.",
+    body: [
+      "Bei der Wärmetherapie arbeiten wir mit einer TDP-Lampe, einer Ferninfrarot-Mineralwärmelampe. Ihre Strahlungsplatte ist mit einer Mischung aus 33 Mineralien beschichtet, die beim Erwärmen eine sanfte, tief wirkende Wärme abgibt.",
+      "Die Wärme erreicht tiefere Gewebeschichten, regt die Durchblutung an und löst Verspannungen. Wir setzen sie gern begleitend ein, zum Beispiel vor einer Massage oder Manualtherapie, und in der Tradition der chinesischen Medizin als moderne Form der Wärmeanwendung.",
+    ],
+    benefits: [
+      "Wohltuende, tief wirkende Wärme",
+      "Lockert Muskeln und löst Verspannungen",
+      "Regt die lokale Durchblutung an",
+      "Angenehm als Vorbereitung oder Ergänzung",
+    ],
+    device: null,
+    related: ["massage", "schroepftherapie", "manualtherapie"],
+    metaTitle: "Wärmetherapie in Hannover | Physiotherapie Zentrum Nord",
+    metaDescription:
+      "Wärmetherapie in Hannover mit TDP-Mineralwärmelampe. Wohltuende Tiefenwärme, lockert Muskeln und fördert die Durchblutung.",
+  },
 ];
 
 export const serviceBySlug = (slug: string) =>
@@ -290,14 +315,6 @@ export const devices: Device[] = [
     focus: "center",
     desc: "Seitenwechselndes Vibrationstraining mit Personal-Trainer-Display, das Sie durch jede Übung führt.",
     slug: "vibrationsplatten-training",
-  },
-  {
-    name: "FASCIQ Faszientools",
-    tag: "Instrumentelle Faszienbehandlung",
-    img: IMG + "fasciq-faszientools.png",
-    focus: "center",
-    desc: "Profi-Werkzeuge aus chirurgischem Edelstahl lösen verklebte Faszien gezielt und spürbar.",
-    slug: "faszienbehandlung",
   },
   {
     name: "Swiss DolorClast",
