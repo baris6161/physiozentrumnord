@@ -122,7 +122,7 @@ export default function Home() {
           </Reveal>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((s, i) => (
-              <Reveal key={s.slug} delay={(i % 4) * 70}>
+              <Reveal key={s.slug} delay={(i % 4) * 70} className="h-full">
                 <ServiceCard service={s} />
               </Reveal>
             ))}
@@ -147,7 +147,7 @@ export default function Home() {
           </Reveal>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {devices.map((d, i) => (
-              <Reveal key={d.name} delay={(i % 4) * 70}>
+              <Reveal key={d.name} delay={(i % 4) * 70} className="h-full">
                 <DeviceCard device={d} />
               </Reveal>
             ))}
@@ -185,7 +185,7 @@ export default function Home() {
           </Reveal>
           <div className="mb-11 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {steps.map((st, i) => (
-              <Reveal key={st.n} delay={i * 80}>
+              <Reveal key={st.n} delay={i * 80} className="h-full">
                 <div className="h-full rounded-card border border-line bg-white p-6 shadow-sm2">
                   <div className="grid h-11 w-11 place-items-center rounded-xl bg-green font-heading text-[19px] font-extrabold text-white">
                     {st.n}

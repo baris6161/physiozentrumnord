@@ -17,6 +17,9 @@ export const site = {
   },
   mapsHref:
     "https://www.google.com/maps/search/?api=1&query=Physiotherapie+Zentrum+Nord+Vo%C3%9Fstr.+1+30161+Hannover",
+  // Offizielle Google-Maps-Einbettung (korrekter Standort-Pin)
+  googleMapsEmbed:
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d430.4554979113425!2d9.737305476730283!3d52.388106808269264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41653bd4764c4235%3A0x9d05a3e363103a6f!2sPhysiotherapie%20Zentrum%20Nord!5e0!3m2!1sde!2sde!4v1785187855844!5m2!1sde!2sde",
   // OpenStreetMap Einbettung (cookielos, ohne Consent)
   osmEmbed:
     "https://www.openstreetmap.org/export/embed.html?bbox=9.7538%2C52.3905%2C9.7638%2C52.3955&layer=mapnik&marker=52.3930%2C9.7588",

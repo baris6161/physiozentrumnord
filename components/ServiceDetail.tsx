@@ -132,7 +132,7 @@ export default function ServiceDetail({ service }: { service: Service }) {
           </Reveal>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((r, i) => (
-              <Reveal key={r.slug} delay={i * 70}>
+              <Reveal key={r.slug} delay={i * 70} className="h-full">
                 <Link
                   href={`/${r.slug}`}
                   className="group flex h-full flex-col overflow-hidden rounded-card border border-line bg-white shadow-sm2 transition duration-200 hover:-translate-y-1 hover:shadow-md2"

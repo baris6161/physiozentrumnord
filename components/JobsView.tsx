@@ -13,7 +13,7 @@ export default function JobsView() {
     <>
       <div className="grid gap-6 md:grid-cols-2">
         {jobs.map((j, i) => (
-          <Reveal key={j.title} delay={i * 80}>
+          <Reveal key={j.title} delay={i * 80} className="h-full">
             <div className="flex h-full flex-col rounded-card border border-line bg-white p-7 shadow-sm2 md:p-8">
               <span className="self-start rounded-full bg-greenTint px-3 py-1.5 text-[13px] font-bold text-greenDark">
                 {j.type}
